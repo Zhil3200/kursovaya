@@ -1,0 +1,211 @@
+<section class="carousel">
+  <div class="container">
+
+    <p-carousel [value]="dataForCarousel" styleClass="custom-carousel" [numVisible]="1" [numScroll]="1" [circular]="true"
+                [autoplayInterval]="4000">
+      <ng-template let-carouselItem pTemplate="item">
+
+        <div class="carousel-item" style="background-image: url({{carouselItem.image}})">
+
+          <div class="carousel-category">
+            {{carouselItem.category}}
+          </div>
+
+          <div class="carousel-title" [innerHTML]="carouselItem.title"></div>
+
+          <div class="carousel-text">
+            {{carouselItem.text}}
+          </div>
+
+          <div class="carousel-button">
+            <button class="button">Подробнее</button>
+          </div>
+        </div>
+
+      </ng-template>
+    </p-carousel>
+
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="container">
+    <div class="services-title">
+      Услуги, которые мы предлагаем
+    </div>
+
+    <div class="services-items">
+      <div class="services-item">
+        <div class="services-item-image"
+             style="background-image: url(../../../assets/images/services/1.png)"></div>
+
+        <div class="services-item-name">Создание сайтов</div>
+
+        <div class="services-item-description">
+          В краткие сроки мы создадим качественный и самое главное продающий сайт для продвижения Вашего бизнеса!
+        </div>
+
+        <div class="services-item-action">
+          <div class="services-item-price">От 7 500₽</div>
+
+          <button class="button" (click)="openModal('Создание сайтов')">Подробнее</button>
+        </div>
+      </div>
+
+      <div class="services-item">
+        <div class="services-item-image"
+             style="background-image: url(../../../assets/images/services/2.png)"></div>
+
+        <div class="services-item-name">Продвижение</div>
+
+        <div class="services-item-description">
+          Вам нужен качественный SMM-специалист или грамотный таргетолог? Мы готовы оказать Вам услугу “Продвижения” на
+          наивысшем уровне!
+        </div>
+
+        <div class="services-item-action">
+          <div class="services-item-price">От 3 500₽</div>
+
+          <button class="button" (click)="openModal('Продвижение')">Подробнее</button>
+        </div>
+      </div>
+
+      <div class="services-item">
+        <div class="services-item-image"
+             style="background-image: url(../../../assets/images/services/3.png)"></div>
+
+        <div class="services-item-name">Реклама</div>
+
+        <div class="services-item-description">
+          Без рекламы не может обойтись ни один бизнес или специалист. Обращаясь к нам, мы гарантируем быстрый прирост
+          клиентов за счёт правильно настроенной рекламы.
+        </div>
+
+        <div class="services-item-action">
+          <div class="services-item-price">От 1 000₽</div>
+
+          <button class="button" (click)="openModal('Реклама')">Подробнее</button>
+        </div>
+      </div>
+
+      <div class="services-item">
+        <div class="services-item-image"
+             style="background-image: url(../../../assets/images/services/4.png)"></div>
+
+        <div class="services-item-name">Копирайтинг</div>
+
+        <div class="services-item-description">
+          Наши копирайтеры готовы написать Вам любые продающие текста, которые не только обеспечат рост охватов, но и
+          помогут выйти на новый уровень в продажах.
+        </div>
+
+        <div class="services-item-action">
+          <div class="services-item-price">От 750₽</div>
+
+          <button class="button" (click)="openModal('Копирайтинг')">Подробнее</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="info" id="info">
+  <div class="container">
+    <div class="info-image">
+      <img src="../../../assets/images/images/info-image.png" alt="Image">
+    </div>
+
+    <div class="info-block">
+      <div class="info-title">
+        Кто мы и чем мы занимаемся?
+      </div>
+
+      <div class="info-description">
+        <span>АйтиШторм</span> — это ваш помощник №1 при решении таких вопросов, как продвижение в сети, разработка
+        сайтов для
+        бизнеса и личного бренда, сторисмейкинг, копирайтинг, маркетинг, разработка визуальной концепции и создание
+        инфопродуктов. Компания была основана в 2019 году и за всё это время смогла выйти в ТОП-10 агенств, предлагающих
+        услуги продвижения в сети.
+      </div>
+
+      <div class="info-small-title">
+        Наши преимущества
+      </div>
+
+      <div class="info-advantages">
+        <div class="info-advantage">
+          <div class="info-advantage-number-circle">
+            <div class="info-advantage-number">
+              1
+            </div>
+          </div>
+
+          <div class="info-advantage-text">
+            <span>Мастерски вовлекаем аудиториюв процесс.</span> Мы увеличиваем процент вовлечённости за короткий
+            промежуток времени.
+          </div>
+        </div>
+
+
+        <div class="info-advantage">
+          <div class="info-advantage-number-circle">
+            <div class="info-advantage-number">
+              2
+            </div>
+          </div>
+
+          <div class="info-advantage-text">
+            <span>Разрабатываем бомбическую визуальную концепцию.</span> Наши специалисты знают как создать уникальный
+            образ вашего проекта.
+          </div>
+        </div>
+
+
+        <div class="info-advantage">
+          <div class="info-advantage-number-circle">
+            <div class="info-advantage-number">
+              3
+            </div>
+          </div>
+
+          <div class="info-advantage-text">
+            <span>Создаём мощные воронки с помощью текстов.</span> Наши копирайтеры создают не только вкусные текста, но
+            и классные воронки.
+          </div>
+        </div>
+
+
+        <div class="info-advantage">
+          <div class="info-advantage-number-circle">
+            <div class="info-advantage-number">
+              4
+            </div>
+          </div>
+
+          <div class="info-advantage-text">
+            <span>Помогаем продавать больше.</span> Мы не только помогаем разработать стратегию по продажам, но также
+            корректируем её под нужды заказчика.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="popular-articles">
+  <div class="container">
+    <app-popular-articles></app-popular-articles>
+  </div>
+</section>
+
+<section class="reviews" id="reviews">
+  <div class="container">
+    <app-reviews></app-reviews>
+  </div>
+</section>
+
+<section class="contacts" id="contacts">
+  <div class="container">
+    <app-contacts></app-contacts>
+  </div>
+</section>

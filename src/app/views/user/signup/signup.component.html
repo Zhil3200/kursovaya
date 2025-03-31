@@ -1,0 +1,84 @@
+<section class="signup" [formGroup]="signupForm">
+  <div class="container">
+    <div class="auth-form">
+      <div class="auth-title">
+        Регистрация на сайте
+      </div>
+
+      <div class="auth-inputs">
+        <div class="auth-input">
+          <input type="text" class="input input-invalid" placeholder="Ваше имя"
+                 formControlName="name">
+
+          <div *ngIf="signupForm.get('name')?.invalid
+                    && (signupForm.get('name')?.touched || signupForm.get('name')?.dirty)">
+
+            <div class="invalid-feedback" *ngIf="signupForm.get('name')?.errors?.['required']">
+              поле обязателен для заполнения
+            </div>
+
+            <div class="invalid-feedback" *ngIf="signupForm.get('name')?.errors?.['pattern']">
+              имя должен содержать русские буквы и пробелы. Каждое новое слово - с большой буквы
+            </div>
+          </div>
+        </div>
+
+        <div class="auth-input">
+          <input type="text" class="input input-invalid" placeholder="Электронная почта"
+                 formControlName="email">
+
+          <div *ngIf="signupForm.get('email')?.invalid
+                    && (signupForm.get('email')?.touched || signupForm.get('email')?.dirty)">
+
+            <div class="invalid-feedback" *ngIf="signupForm.get('email')?.errors?.['required']">
+              поле обязателен для заполнения
+            </div>
+
+            <div class="invalid-feedback" *ngIf="signupForm.get('email')?.errors?.['pattern']">
+              введите корректный email
+            </div>
+          </div>
+        </div>
+
+        <div class="auth-input">
+          <input type="password" class="input input-invalid" placeholder="Пароль"
+                 formControlName="password">
+
+          <div *ngIf="signupForm.get('password')?.invalid
+                    && (signupForm.get('password')?.touched || signupForm.get('password')?.dirty)">
+
+            <div class="invalid-feedback" *ngIf="signupForm.get('password')?.errors?.['required']">
+              поле обязателен для заполнения
+            </div>
+
+            <div class="invalid-feedback" *ngIf="signupForm.get('password')?.errors?.['pattern']">
+              пароль должен быть не менее 8 символов, содержать как минимум 1 букву в верхнем регистре и как минимум 1
+              цифру
+            </div>
+          </div>
+        </div>
+
+        <div class="auth-checkbox">
+          <input type="checkbox" id="agree" formControlName="agree">
+          <label for="agree">Я принимаю <a routerLink="/policy" fragment="conditions">условия пользовательского соглашения</a> и даю <a routerLink="/policy"  fragment="agreement">согласие
+            на обработку персональных данных.</a></label>
+        </div>
+      </div>
+
+
+      <div class="auth-button">
+        <button class="button"
+                [disabled]="signupForm.invalid" (click)="signup()">Зарегистрироваться
+        </button>
+      </div>
+
+      <div class="auth-link">
+        Уже есть аккаунт? <a routerLink="/login">Войдите</a>
+      </div>
+    </div>
+
+    <div class="page-image">
+      <img src="assets/images/images/login-image.png" alt="Image">
+    </div>
+  </div>
+</section>

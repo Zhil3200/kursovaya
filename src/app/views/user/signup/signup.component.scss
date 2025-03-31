@@ -1,0 +1,17 @@
+@import "auth-form";
+
+.signup .container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 120px;
+  padding-bottom: 120px;
+
+
+  .page-image {
+    margin-left: 20px;
+
+    img {
+      vertical-align: bottom;
+    }
+  }
+}

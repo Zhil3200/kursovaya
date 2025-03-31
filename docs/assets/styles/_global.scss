@@ -1,0 +1,63 @@
+@import "variables";
+@import "mixins";
+
+html, body {
+  margin: 0;
+  padding: 0;
+
+  font-family: $font-family;
+  font-weight: 400;
+}
+
+.container {
+  max-width: $container-width;
+  margin: 0 auto;
+}
+
+.button {
+  text-align: center;
+  padding: 15px;
+  border-radius: 5px;
+  background: $light-blue-color;
+  box-sizing: border-box;
+  cursor: pointer;
+  border: 1.5px solid transparent;
+  font-family: $font-family;
+  font-weight: 500;
+  font-size: 16px;
+  color: #fff;
+  transition: all .3s;
+
+  &:hover {
+    background-color: $light-blue-color-hover;
+  }
+
+  &:disabled {
+    background: gray;
+    cursor: not-allowed;
+  }
+}
+
+.input {
+  border: 2px solid $light-blue-color;
+  border-radius: 3px;
+  padding: 17px 20px;
+  box-sizing: border-box;
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 14px;
+  color: $blue-color;
+}
+
+.invalid-feedback {
+  font-size: 12px;
+  color: red;
+  margin-top: 2px;
+  width: 422px;
+}
+
+.input-invalid.ng-touched.ng-invalid {
+  border-color: red;
+}
+
+

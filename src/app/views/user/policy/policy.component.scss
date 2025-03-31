@@ -1,0 +1,32 @@
+@import "../../assets/styles/variables";
+@import "../../assets/styles/mixins";
+
+.policy {
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 142px;
+
+    .policy-title {
+      align-self: start;
+      @include head-title;
+      margin-bottom: 30px;
+      margin-top: 60px;
+    }
+    .policy-text {
+      font-size: 14px;
+      line-height: 130%;
+      color: #1e1a2b;
+      margin-bottom: 40px;
+      .policy-small-title {
+        font-family: $second-family;
+        font-weight: 400;
+        font-size: 26px;
+        color: $light-blue-color;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

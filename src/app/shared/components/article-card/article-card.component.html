@@ -1,0 +1,26 @@
+<div class="popular-articles-item">
+
+  <div class="popular-articles-category">
+    {{ article.category }}
+  </div>
+
+  <div class="popular-articles-item-image"
+       style="background-image: url({{'/assets/images/images/' + article.image}})">
+
+  </div>
+
+
+  <div class="popular-articles-item-texts">
+    <div class="popular-articles-item-name">
+      {{ article.title | textLength : 80 }}
+    </div>
+
+    <div class="popular-articles-item-description">
+      {{ article.description | textLength : 200}}
+    </div>
+  </div>
+
+  <div class="popular-articles-item-action">
+    <a routerLink="/articles/{{ article.url }}">Читать дальше</a>
+  </div>
+</div>
